@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@theme inline {
+  /* Colors */
+  --color-lightHover: #fcf4ff;
+  --color-darkHover: #2a004a;
+  --color-darkTheme: #11001f;
+  
+
+  /* Fonts */
+  --font-display: "Ovo", serif;
+
+  /* Shadows */
+  --shadow-custom-card: 4px 4px 0 #fff;
+
+
+}
+
+/* Dark mode using prefers-color-scheme */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-lightHover: #fcf4ff;
+    --color-darkTheme: #2a004a;
+    --shadow-custom-card: 4px 4px 0 #000;
+  }
+}
+
+
+* {
+  font-family: var(--font-display);
+}

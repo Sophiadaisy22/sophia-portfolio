@@ -39,10 +39,8 @@ const Header = () => {
         whileInView ={{opacity: 1 }}
         transition={{ duration: 0.6, delay: 0.7 }}
       className="max-w-xl mx-auto">
-        Sophia Ogogo is a young woman in tech, a lover of God, and a growing
-        frontend developer passionate about building meaningful digital
-        experiences. She enjoys learning, creating, and making a positive impact
-        wherever she is.
+       Sophia Ogogo is a frontend developer skilled in React, Next.js, Tailwind CSS, and JavaScript, building clean, accessible, and user-focused digital experiences. 
+       She blends creativity with technical skill,writing, and basic design. 
       </motion.p>
       <div className="flex flex-col sm:flex-row items-center gap-4 mt-4">
         <motion.a
@@ -60,7 +58,7 @@ const Header = () => {
         initial={{ y: 30, opacity: 0 }}
         whileInView ={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, delay: 1 }}
-          href="/sample-resume,pdf"
+          href="/sample-resume.pdf"
           download
           className="px-10 py-3 border rounded-full border-gray-500 flex 
           items-center gap-2"

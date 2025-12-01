@@ -7,62 +7,77 @@ import { motion, scale } from "motion/react";
 const About = () => {
   return (
     <motion.div
-      initial={{opacity: 0 }}
-      whileInView={{opacity: 1 }}
-      transition={{ duration: 2}}
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 2 }}
       id="about"
       className="w-full px-[12%] py-10
     scroll-mt-20 bg-gray-200 mt-10"
     >
-      <motion.h4 
-      initial={{opacity: 0, y:-20 }}
-        whileInView ={{opacity: 1, y:0 }}
+      <motion.h4
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.3 }}
-      className="text-center mb-2 text-lg">Introduction</motion.h4>
-      <motion.h2 
-      initial={{opacity: 0, y:-20 }}
-        whileInView ={{opacity: 1, y:0 }}
+        className="text-center mb-2 text-lg"
+      >
+        Introduction
+      </motion.h4>
+      <motion.h2
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.5 }}
-      className="text-center text-5xl">About me</motion.h2>
+        className="text-center text-5xl"
+      >
+        About me
+      </motion.h2>
 
       <motion.div
-      initial={{opacity: 0}}
-        whileInView ={{opacity: 1}}
-        transition={{ duration: 0.8}}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.8 }}
         className="flex w-full flex-col lg:flex-row 
       items-center gap-20 my-20"
       >
-        <motion.div 
-        initial={{opacity: 0, scale:0.9}}
-        whileInView ={{opacity: 1, scale:1}}
-        transition={{ duration: 0.6}}
-        className="w-48 sm:w-80 rounded-3xl max-w-none">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6 }}
+          className="w-48 sm:w-80 rounded-3xl max-w-none"
+        >
           <Image
             src={assets.user_image}
             alt="user"
             className="w-full rounded-3xl"
           />
         </motion.div>
-        <motion.div 
-        initial={{opacity: 0}}
-        whileInView ={{opacity: 1}}
-        transition={{ duration: 0.6, delay:0.8}}
-        className="flex-1">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.8 }}
+          className="flex-1"
+        >
           <p className="mb-10 max-w-2xl ">
-            Sophia Ogogo is a young woman in tech, a lover of God, and a growing
-            frontend developer passionate about building meaningful digital
-            experiences. She enjoys learning, creating, and making a positive
-            impact wherever she is.
+            I’m a First Class Computer Science graduate and a frontend developer
+            with experience in React, Next.js, Tailwind CSS, and JavaScript. I’m
+            passionate about building simple, beautiful, and user-friendly
+            digital experiences, and I’m currently working toward becoming a
+            full software developer. I live in Nigeria but I’m open to remote
+            opportunities that allow me to learn, grow, and contribute. Beyond
+            coding, I love design, where I get to express my creativity, and
+            event organizing, which lets me bring people together in meaningful
+            ways. When I’m not working, I enjoy reading, learning, and staying
+            inspired. I’m committed to impacting my world one skill at a time.
           </p>
 
-          <motion.ul 
-          initial={{opacity: 0}}
-        whileInView ={{opacity: 1}}
-        transition={{ duration: 0.8, delay:1}}
-          className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl">
+          <motion.ul
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 1 }}
+            className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl"
+          >
             {infoList.map(({ icon, iconDark, title, description }, index) => (
               <motion.li
-              whileInView={{scale:1.05}}
+                whileInView={{ scale: 1.05 }}
                 className="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer
     hover:bg-[var(--color-lightHover)] hover:-translate-y-1
     duration-500 hover:shadow-[var(--shadow-custom-card)]"
@@ -75,19 +90,23 @@ const About = () => {
             ))}
           </motion.ul>
 
-          <motion.h4 
-          initial={{y:20, opacity: 0}}
-        whileInView ={{y:0, opacity: 1}}
-        transition={{ delay:1.3, duration:0.5}}
-          className="my-6 text-gray-700 ">Tools I use</motion.h4>
+          <motion.h4
+            initial={{ y: 20, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ delay: 1.3, duration: 0.5 }}
+            className="my-6 text-gray-700 "
+          >
+            Tools I use
+          </motion.h4>
           <motion.ul
-          initial={{opacity: 0}}
-        whileInView ={{opacity: 1}}
-        transition={{ duration: 0.8}}
-          className="flex items-center gap-3  sm:gap-5">
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.8 }}
+            className="flex items-center gap-3  sm:gap-5"
+          >
             {toolsData.map((tool, index) => (
               <motion.li
-            whileHover ={{scale: 1.05}}
+                whileHover={{ scale: 1.05 }}
                 className="flex items-center justify-center w-12 sm:w-14 aspect-square border 
                 border-gray-400 rounded-lg cursor-pointer hover:translate-y-1 duration-500"
                 key={index}
